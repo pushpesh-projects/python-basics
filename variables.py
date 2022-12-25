@@ -19,9 +19,9 @@ and use the print() function to output strings and variables,
 
 You can also use compound assignment operators (shortcut operators)
 to modify values assigned to variables,
-i = i + 2 * j ⇒ i += 2 * j
 var = var / 2 ⇒ var /= 2
 rem = rem % 10 ⇒ rem %= 10
+i = i + 2 * j ⇒ i += 2 * j
 j = j - (i + var + rem) ⇒ j -= (i + var + rem)
 x = x ** 2 ⇒ x **= 2
 """
