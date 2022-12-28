@@ -348,3 +348,77 @@ def factorial(n):
 
 
 print(factorial(4))  # 4 * 3 * 2 * 1 = 24
+print("----------Example 15---------------")
+
+
+# A list can be sent to a function as an argument.
+def list_sum(lst):
+    s = 0
+
+    for elem in lst:
+        s += elem
+
+    return s
+
+
+print(list_sum([5, 4, 3]))
+print("----------Example 16---------------")
+
+# a list can be a function result as well.
+
+
+def strange_list_fun(n):
+    strange_list = []
+
+    for i in range(0, n):
+        strange_list.insert(0, i)
+
+    return strange_list
+
+
+print(strange_list_fun(5))
+print("----------Example 17---------------")
+
+# How the function interacts with its arguments
+# changing the parameter's value doesn't propagate outside the function
+
+
+def my_function(n):
+    print("I got", n)
+    n += 1
+    print("I have", n)
+
+
+var = 1
+my_function(var)
+print(var)
+print("----------Example 17---------------")
+
+
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    print("Print #2:", my_list_2)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    my_list_1 = [0, 1]  # Now my_list_1 refers to a new list
+    print("Print #3:", my_list_1)  # [0, 1]
+    print("Print #4:", my_list_2)  # [2, 3]
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)  # [2, 3]
+print("----------Example 18---------------")
+
+
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    print("Print #2:", my_list_2)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    del my_list_1[0]  # Here we deleted the index 0 of list [2, 3]
+    print("Print #3:", my_list_1)  # [3]
+    print("Print #4:", my_list_2)  # [3]
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)  # [3]
+
+
