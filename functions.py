@@ -14,20 +14,23 @@ def message():
     print("Enter a value: ")
 message = 1
 
-Assigning a value to the name message causes Python to forget its previous role.
+Assigning a value to the name message causes Python to forget its previous role
 The function named message becomes unavailable.
 """
 
 """
 Positional parameter passing
-A technique which assigns the ith (first, second, and so on) argument to the ith (first, second, and so on) 
-function parameter is called positional parameter passing, while arguments passed in this way 
-are named positional arguments.
+A technique which assigns the ith (first, second, and so on) argument to the
+ith (first, second, and so on)function parameter is called positional parameter
+passing, while arguments passed in this way are named positional arguments.
 
 Keyword argument passing
-Python offers another convention for passing arguments, where the meaning of the argument is dictated by its name, 
-not by its position - it's called keyword argument passing.
-keyword (named) argument passing in which the order of arguments passed doesn't matter 
+Python offers another convention for passing arguments, where the meaning of
+the argument is dictated by its name,not by its position-it's called keyword
+argument passing.
+
+keyword (named) argument passing in which the order of arguments passed doesn't
+matter.
 
 def introduction(first_name, last_name):
     print("Hello, my name is", first_name, last_name)
@@ -36,15 +39,16 @@ introduction(first_name = "James", last_name = "Bond")
 introduction(last_name = "Skywalker", first_name = "Luke")
 
 Mixing positional and keyword arguments
-You can mix both fashions if you want - there is only one unbreakable rule: 
+You can mix both fashions if you want - there is only one unbreakable rule:
 you have to put positional arguments before keyword arguments.
 positional arguments mustn't follow keyword arguments. It causes SyntaxError.
 
-If you try to pass more than one value to one argument, all you'll get is a runtime error.
+If you try to pass more than one value to one argument,
+all you'll get is a runtime error.
 
-It happens at times that a particular parameter's values are in use more often than others. 
-Such arguments may have their default (predefined) values taken into consideration when their 
-corresponding arguments have been omitted.
+It happens at times that a particular parameter's values are in use more often
+than others.Such arguments may have their default (predefined) values taken
+into consideration when their corresponding arguments have been omitted.
 
 def introduction(first_name, last_name="Smith"):
     print("Hello, my name is", first_name, last_name)
@@ -54,14 +58,13 @@ introduction("Henry")  # Hello, my name is Henry Smith
 introduction(first_name="William")  # Hello, my name is William Smith
 """
 
-
 """
 return keyword can have expressions.
 return keyword can be used without expression as well.
 Note: if a function is not intended to produce a result,
-using the return instruction is not obligatory - it will be executed implicitly at the end of the function.
-Anyway, you can use it to terminate a function's activities on demand,
-before the control reaches the function's last line.
+using the return instruction is not obligatory - it will be executed implicitly
+at the end of the function.you can use it to terminate a function's activities
+on demand, before the control reaches the function's last line.
 
 you are always allowed to ignore the function's result,
 and be satisfied with the function's effect (if the function has any)
@@ -83,17 +86,18 @@ This lesson is boring...
 
 """
 None keyword
-Its data doesn't represent any reasonable value - actually, it's not a value at all; 
-hence, it mustn't take part in any expressions.
-print(None + 2) will cause a runtime error: TypeError: unsupported operand type(s) for +
+Its data doesn't represent any reasonable value - actually, it's not a value at
+all; hence, it mustn't take part in any expressions.
+print(None + 2) will cause a runtime error:
+TypeError: unsupported operand type(s) for +
 
 There are only two kinds of circumstances when None can be safely used:
 
 when you assign it to a variable (or return it as a function's result)
 when you compare it with a variable to diagnose its internal state.
 
-Don't forget this: if a function doesn't return a certain value using a return expression clause, 
-it is assumed that it implicitly returns None.
+Don't forget this: if a function doesn't return a certain value using a return
+expression clause,it is assumed that it implicitly returns None.
 
 The return statement exits the function
 """
@@ -101,7 +105,6 @@ print("----------Example 1---------------")
 value = None
 if value is None:
     print("Sorry, you don't carry any value")
-
 
 print("----------Example 2---------------")
 
@@ -111,7 +114,6 @@ def hello():
 
 
 print(hello())  # None
-
 
 print("----------Example 3---------------")
 
@@ -123,8 +125,9 @@ def i_exit_before_printing_due_to_return_keyword():
 
 i_exit_before_printing_due_to_return_keyword()
 
-
 print("----------Example 4---------------")
+
+
 # Leap year calculator
 
 
@@ -151,7 +154,6 @@ for i in range(len(test_data)):
         print("OK")
     else:
         print("Failed")
-
 
 print("----------Example 5---------------")
 
@@ -182,9 +184,10 @@ for i in range(len(test_years)):
     else:
         print("Failed")
 
-
-# Your task is to write and test a function which takes three arguments (a year, a month, and a day of the month)
-# and returns the corresponding day of the year, or returns None if any of the arguments is invalid
+# Your task is to write and test a function which takes three arguments
+# (a year, a month, and a day of the month)
+# and returns the corresponding day of the year, or returns None if any of
+# the arguments is invalid
 print("----------Example 6---------------")
 
 
@@ -217,8 +220,9 @@ print(day_of_year(2000, 12, 31))
 print(day_of_year(2001, 12, 31))
 print(day_of_year(2000, 3, 1))
 
-
 print("----------Example 7---------------")
+
+
 # Prime number :
 
 
@@ -235,9 +239,8 @@ for i in range(1, 20):
     if is_prime(i + 1):
         print(i + 1, end=" ")
 
-
-# A variable that exists outside a function has a scope inside the function body
-# unless the function defines a variable of the same name.
+# A variable that exists outside a function has a scope inside the function
+# body unless the function defines a variable of the same name.
 print("\n----------Example 8---------------")
 var = 2
 
@@ -246,8 +249,7 @@ def mult_by_var(x):
     return x * var
 
 
-print(mult_by_var(7))    # outputs: 14
-
+print(mult_by_var(7))  # outputs: 14
 
 # Variable shadowing occurs when a variable defined in the inner scope
 # has the same name as a variable in the outer scope.
@@ -262,8 +264,7 @@ def mult(x):
 
 
 var = 3
-print(mult(7))    # outputs: 49
-
+print(mult(7))  # outputs: 49
 
 # A variable that exists inside a function has a scope inside the function body
 print("----------Example 10---------------")
@@ -274,13 +275,14 @@ def adding(x):
     return x + var
 
 
-print(adding(4))    # outputs: 11
+print(adding(4))  # outputs: 11
 # print(var)    # NameError
 
 print("----------Example 11---------------")
-# You can use the global keyword followed by a variable name to make the variable's scope global, e.g.:
+# You can use the global keyword followed by a variable name to make the
+# variable's scope global, e.g.:
 var = 2
-print(var)    # outputs: 2
+print(var)  # outputs: 2
 
 
 def return_var():
@@ -289,11 +291,12 @@ def return_var():
     return var
 
 
-print(return_var())    # outputs: 5
-print(var)    # outputs: 5
-
+print(return_var())  # outputs: 5
+print(var)  # outputs: 5
 
 print("----------Example 12---------------")
+
+
 # factorial number
 
 
@@ -312,8 +315,9 @@ def factorial_function(n):
 for n in range(1, 6):  # testing
     print(n, factorial_function(n))
 
-
 print("----------Example 13---------------")
+
+
 #  Fibonacci numbers:
 
 
@@ -334,14 +338,13 @@ def fib(n):
 for n in range(1, 10):  # testing
     print(n, "->", fib(n))
 
-
 # factorial using recursion
 # Recursive implementation of the factorial function.
 print("----------Example 14---------------")
 
 
 def factorial(n):
-    if n == 1:    # The base case (termination condition.)
+    if n == 1:  # The base case (termination condition.)
         return 1
     else:
         return n * factorial(n - 1)
@@ -364,6 +367,7 @@ def list_sum(lst):
 print(list_sum([5, 4, 3]))
 print("----------Example 16---------------")
 
+
 # a list can be a function result as well.
 
 
@@ -378,6 +382,7 @@ def strange_list_fun(n):
 
 print(strange_list_fun(5))
 print("----------Example 17---------------")
+
 
 # How the function interacts with its arguments
 # changing the parameter's value doesn't propagate outside the function
@@ -396,8 +401,10 @@ print("----------Example 17---------------")
 
 
 def my_function(my_list_1):
-    print("Print #1:", my_list_1)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
-    print("Print #2:", my_list_2)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    print("Print #1:", my_list_1)
+    # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    print("Print #2:", my_list_2)
     my_list_1 = [0, 1]  # Now my_list_1 refers to a new list
     print("Print #3:", my_list_1)  # [0, 1]
     print("Print #4:", my_list_2)  # [2, 3]
@@ -410,8 +417,10 @@ print("----------Example 18---------------")
 
 
 def my_function(my_list_1):
-    print("Print #1:", my_list_1)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
-    print("Print #2:", my_list_2)  # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    print("Print #1:", my_list_1)
+    # Here my_list_1 and my_list_2 refers to the same list [2, 3]
+    print("Print #2:", my_list_2)
     del my_list_1[0]  # Here we deleted the index 0 of list [2, 3]
     print("Print #3:", my_list_1)  # [3]
     print("Print #4:", my_list_2)  # [3]
@@ -420,5 +429,3 @@ def my_function(my_list_1):
 my_list_2 = [2, 3]
 my_function(my_list_2)
 print("Print #5:", my_list_2)  # [3]
-
-
