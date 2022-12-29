@@ -82,3 +82,42 @@ if x > 10:  # False
 
 else:
     print("else will be executed")
+
+
+"""
+In Python, if number % 2 == 1: and if number % 2: are ways to write an if
+statement that will execute a block of code if the value of number is odd.
+
+The first version, if number % 2 == 1:, uses the modulo operator (%) to find
+the remainder when number is divided by 2. If the remainder is equal to 1, it
+means that number is odd. In this case, the block of code following the if
+statement will be executed. If the remainder is not equal to 1, it means that
+number is even, and the block of code will not be executed.
+
+The second version, if number % 2:, also uses the modulo operator to find the
+remainder when number is divided by 2. However, instead of explicitly checking
+if the remainder is equal to 1, it relies on the fact that in Python, any value
+that is considered "truthy" will be treated as True in a boolean context, and
+any value that is considered "falsy" will be treated as False. The value 0 is
+considered falsy, so if number is even, the result of number % 2 will be 0, and
+the if statement will not execute the block of code. If number is odd, the
+result of number % 2 will be 1, which is considered truthy, and the if
+statement will execute the block of code.
+"""
+
+print("--------------Example 6----------------------")
+number = 5
+
+# Using if number % 2 == 1:
+if number % 2 == 1:
+    print("Number is odd")
+
+# Output: Number is odd
+
+number = 6
+
+# Using if number % 2:
+if number % 2:
+    print("Number is odd")
+
+# Output: (nothing)
