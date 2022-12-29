@@ -1,3 +1,16 @@
+"""
+The while loop executes a statement or a set of statements as long as a
+specified boolean condition is true.
+# Example 1
+while True:
+    print("Stuck in an infinite loop.")
+
+# Example 2
+counter = 5
+while counter > 2:
+    print(counter)
+    counter -= 1
+"""
 print("--------------Example 1----------------------")
 number = 5
 
